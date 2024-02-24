@@ -1,13 +1,26 @@
-import 'package:dialog_dash/src/features/features.dart';
-import 'package:dialog_dash/src/shared/shared.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:go_router/go_router.dart';
 
-class DialogDashApp extends StatelessWidget {
+import '../shared/shared.dart';
+import 'navigation/navigation.dart';
+
+class DialogDashApp extends StatefulWidget {
   const DialogDashApp({super.key});
 
   @override
+  State<DialogDashApp> createState() => _DialogDashAppState();
+}
+
+class _DialogDashAppState extends State<DialogDashApp> {
+  final router = GoRouter(
+    routes: $appRoutes,
+    initialLocation: SignInRoute().location,
+  );
+
+  @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       title: 'Dialog Dash',
       theme: ThemeData(
         useMaterial3: true,
@@ -19,7 +32,9 @@ class DialogDashApp extends StatelessWidget {
         ),
       ),
       debugShowCheckedModeBanner: false,
-      home: const ChatScreen(),
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      supportedLocales: AppLocalizations.supportedLocales,
+      routerConfig: router,
     );
   }
 }

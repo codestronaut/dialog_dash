@@ -8,6 +8,9 @@ extension DimensX on BuildContext {
   double get spacingMd => 16.0;
   double get spacingLg => 20.0;
   double get spacingXlg => 24.0;
+
+  double get deviceWidth => MediaQuery.of(this).size.width;
+  double get deviceHeight => MediaQuery.of(this).size.height;
 }
 
 extension LayoutX on double {

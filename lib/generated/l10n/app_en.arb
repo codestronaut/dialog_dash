@@ -1,0 +1,16 @@
+{
+  "appName": "DialogDash",
+  "firstAppName": "Dialog",
+  "lastAppName": "Dash",
+
+  "signInLabel": "Sign In",
+  "signUpLabel": "Sign Up",
+  "emailAddressLabel": "Email Address",
+  "emailAddressHint": "Enter your email address",
+  "passwordLabel": "Password",
+  "passwordHint": "Enter your password",
+  "dontHaveAccountLabel": "Don't have an account?",
+  "forgotPasswordLabel": "Forgot Password",
+
+  "pleaseWaitLabel": "Please Wait"
+}
