@@ -1,6 +1,10 @@
-import 'package:dialog_dash/src/src.dart';
 import 'package:flutter/material.dart';
 
+import 'src/src.dart';
+
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  configureDependencies();
+
   runApp(const DialogDashApp());
 }
